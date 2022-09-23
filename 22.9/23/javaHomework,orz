@@ -1,0 +1,143 @@
+import java.util.Scanner;
+import java.util.Random;
+public class hello {
+   /* public static String decimalToBinary(int value) {
+        //两种方法，一种是取余后倒序输出,一种是循环相减直至为0或1，输出值属于字符串则我认为会更偏向于第一种方法，因为转换类型次数会少于第二种
+        //做题后，发现题目是要求返回String类，若仍未第一种逆序输出过于麻烦，故选择求一位插入到目标字符串前端即可。
+        String str = "";
+        int temp = value;
+        int result;
+        while (temp!=0)
+        {
+            result=temp%2;
+            str= result+str;
+            temp=temp/2;
+        }
+        return str;
+    }*/
+   /* public static void Addition(int a,int b,int c){
+        if(a+b==c)
+        {
+            System.out.println(a);
+            System.out.println(b);
+            System.out.println(c);
+            System.out.println("Correct");
+        }
+        else
+        {
+            c=a+b;
+            System.out.println("Your answer is wrong. The correct answer is "+ c);
+        }
+    }
+
+    public static void Subtraction(int a,int b,int c){
+        if(a-b==c)
+        {
+
+            System.out.println("Correct");
+        }
+        else
+        {
+            c=a-b;
+            System.out.println("Your answer is wrong. The correct answer is "+ c);
+        }
+    }
+
+    public static void Multiplication(int a,int b,int c){
+        if(a*b==c)
+        {
+            System.out.println("Correct");
+        }
+        else
+        {
+            c=a*b;
+            System.out.println("Your answer is wrong. The correct answer is "+ c);
+        }
+    }
+
+    public static void Division(int a,int b,int c){
+        if(a/b==c)
+        {
+            System.out.println("Correct");
+        }
+        else
+        {
+            c=a/b;
+            System.out.println("Your answer is wrong. The correct answer is "+ c);
+        }
+    }
+
+*/
+    public static double DistanceTwoPoint(double x1,double y1,double x2,double y2){
+        double dis;
+        x1=Math.pow(x1-x2,2);
+        y1=Math.pow(y1-y2,2);
+        dis=Math.sqrt(x1+y1);
+        return dis;
+    }
+    public static void main(String[] args) {
+        /*int flag=0;
+        while(flag!=5) {
+            System.out.println("Main menu");
+            System.out.println("1: Addition\n" +
+                    "2: Subtraction\n" +
+                    "3: Multiplication\n" +
+                    "4: Division\n" +
+                    "5: Exit");
+            Scanner sc = new Scanner(System.in);
+            Random a=new Random();
+            flag = sc.nextInt();
+            int[] num = new int[3];
+            switch (flag) {
+                case 1:
+
+                    num[0]= a.nextInt(10);
+                    num[1]= a.nextInt(10);
+                    System.out.println(num[0]+" + "+num[1]+"? ");
+                    num[2]=sc.nextInt();
+                    Addition(num[0], num[1], num[2]);
+                    break;
+                case 2:
+
+                    num[0]= a.nextInt(10);
+                    num[1]= a.nextInt(10);
+                    if(num[1]>num[0]){
+                        num[2]=num[1];
+                        num[1]=num[0];
+                        num[0]=num[2];
+                    }
+                    System.out.println(num[0]+" - "+num[1]+"? ");
+                    num[2]=sc.nextInt();
+                    Subtraction(num[0], num[1], num[2]);
+                    break;
+                case 3:
+                    num[0]= a.nextInt(10);
+                    num[1]= a.nextInt(10);
+                    System.out.println(num[0]+" * "+num[1]+"? ");
+                    num[2]=sc.nextInt();
+                    Multiplication(num[0], num[1], num[2]);
+                    break;
+                case 4:
+                    num[0]= a.nextInt(10);
+                    while(num[1]==0) {
+                        num[1] = a.nextInt(10);
+                    }
+                    System.out.println(num[0]+" / "+num[1]+"? ");
+                    num[2]=sc.nextInt();
+                    Division(num[0], num[1], num[2]);//从示例上看似乎好像是int类型的除法哈，若需要小数可使用浮点，或者直接分数表示（这就感觉是牵扯到字符串读取技术和最小公约数的问题了）
+                    break;
+                case 5:
+                    break;
+                default:
+                    System.out.println("It's wrong!");
+            }
+        }*/
+        double x,y;
+        Random rx = new Random();
+        Random ry = new Random();
+        x=rx.nextDouble()*10-5;//*10产生0-10的数，-5则是（-5，5）的数
+        y=ry.nextDouble()*10-5;
+        System.out.println("The point is ("+x+", "+y+") and its distance to the center is "+DistanceTwoPoint(0,0,x,y));
+    }
+}
+//哈哈哈默不吭声的把两个个作业合二为一没人会发现吧
